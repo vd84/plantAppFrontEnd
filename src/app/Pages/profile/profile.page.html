@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Welcome to your profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>Your Stats</ion-card-content>
+  </ion-card>
+
+  <ion-card-content>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let plant of userPlants">
+
+          <ion-card button="true" >
+            <ion-icon name="flower"></ion-icon>
+
+            <ion-img src="{{plant.imgUrl}}" alt="Plant picture">
+            </ion-img>
+
+            <ion-textarea>
+              {{plant.name}}
+            </ion-textarea>
+
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+
+
+  </ion-card-content>
+
+  <ion-button (click)="addPlant()">Add new plant</ion-button>
+
+</ion-content>

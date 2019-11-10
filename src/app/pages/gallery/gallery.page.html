@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Welcome to the Gallery</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+    <ion-card-content>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col *ngFor="let plant of allPlants">
+
+                    <ion-img src="{{plant.imgUrl}}" alt="Plant picture">
+                    </ion-img>
+
+                    <ion-textarea>
+                        {{plant.name}}
+                    </ion-textarea>
+
+
+                </ion-col>
+            </ion-row>
+
+
+        </ion-grid>
+
+
+    </ion-card-content>
+
+
+</ion-content>

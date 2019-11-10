@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Home
+        </ion-title>
+        <ion-img slot="end" id="logo" src="/assets/plantLogga.png"></ion-img>
+
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <ion-title>
+        Plant app!
+    </ion-title>
+
+
+    <ion-card-content>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col *ngFor="let plant of plants">
+
+                    <ion-card button="true" href="/specific-plant" (click)="setClickedPlantToLocalStorage(plant.id)">
+                        <ion-icon name="flower"></ion-icon>
+
+                        <ion-img src="{{plant.imgUrl}}" alt="Plant picture">
+                        </ion-img>
+
+                        <ion-textarea>
+                            {{plant.name}}
+                        </ion-textarea>
+
+                    </ion-card>
+
+                </ion-col>
+            </ion-row>
+
+
+        </ion-grid>
+
+
+    </ion-card-content>
+
+
+</ion-content>

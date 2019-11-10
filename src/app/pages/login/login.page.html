@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Welcome to the Plant App!
+        </ion-title>
+
+
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+
+    <ion-input type="text" placeholder="Username"
+               accept="string" required="true"
+                [(ngModel)]="username">Username</ion-input>
+
+    <ion-button (click)="ordinaryLogin()">
+        Login with credentials
+    </ion-button>
+
+    <ion-button (click)="doFbLogin()">
+        Login with Facebook
+    </ion-button>
+</ion-content>

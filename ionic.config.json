@@ -1,6 +1,8 @@
 {
   "name": "plantAppFrontEnd",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "06b54b4b"
 }
